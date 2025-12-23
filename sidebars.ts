@@ -3,17 +3,7 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   docsSidebar: [
     'index',
-    {
-      type: 'category',
-      label: 'Mo Universe',
-      items: [
-        'architecture/overview',
-        'architecture/mo-self',
-        'architecture/mo-pulse',
-        'architecture/mo-coach',
-        'architecture/mo-connect',
-      ],
-    },
+    'architecture/overview',
     {
       type: 'category',
       label: 'MO:SELF',

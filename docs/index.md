@@ -40,10 +40,10 @@ The Mo app is organized into 4 domains:
 
 | Domain | Role |
 |--------|------|
-| [MO:SELF](./architecture/mo-self) | Knows who you are, what you want, where you've been |
-| [MO:PULSE](./architecture/mo-pulse) | Watches everything — workouts, body, recovery |
-| [MO:COACH](./architecture/mo-coach) | Thinks, adapts, learns, coaches |
-| [MO:CONNECT](./architecture/mo-connect) | Links you to devices, community, knowledge |
+| [MO:SELF](./mo-self/) | Knows who you are, what you want, where you've been |
+| [MO:PULSE](./mo-pulse/) | Watches everything — workouts, body, recovery |
+| [MO:COACH](./mo-coach/) | Thinks, adapts, learns, coaches |
+| [MO:CONNECT](./mo-connect/) | Links you to devices, community, knowledge |
 
 ---
 

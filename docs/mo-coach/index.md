@@ -44,6 +44,58 @@ interface MoCoachOutput {
 
 ---
 
+## MoAdapt Logic Overview
+
+### Fatigue Calculation
+
+```
+Fatigue Score (0-10) = Sum of:
+├── RPE Creep (0-2)        → Detects upward RPE trend
+├── Performance Drop (0-2)  → High average RPE
+├── Recovery Debt (0-3)     → Poor sleep/energy/soreness
+├── Volume Load (0-2)       → Training volume spike
+└── Streak Score (0-1)      → 5+ consecutive days
+```
+
+| Score | Level | Color | Action |
+|-------|-------|-------|--------|
+| 0-3 | Fresh | Green | Train normally |
+| 4-5 | Normal | Yellow | Monitor closely |
+| 6-7 | Elevated | Orange | Consider reducing |
+| 8-9 | High | Red | Reduce intensity |
+| 10 | Critical | Red | Rest day recommended |
+
+### Progression Gates
+
+Before allowing weight increase, all gates must pass:
+
+```
+┌─────────────────────────────────────────┐
+│           PROGRESSION GATES             │
+├─────────────────────────────────────────┤
+│ 1. Fatigue Gate    → Score < 7          │
+│ 2. Performance Gate → Hit target reps   │
+│ 3. RPE Gate        → RPE in range       │
+│ 4. Recovery Gate   → Adequate recovery  │
+└─────────────────────────────────────────┘
+```
+
+| Exercise Type | Target Reps | Max RPE | Weight Jump |
+|---------------|-------------|---------|-------------|
+| Compound | 8 | 8 | +5 lbs |
+| Isolation | 10 | 7 | +2.5 lbs |
+
+### Deload Triggers
+
+| Trigger | Condition | Deload Type |
+|---------|-----------|-------------|
+| Scheduled | Every 4 weeks | Volume (60% volume, 100% intensity) |
+| Critical Fatigue | 2+ days at score 8+ | Intensity (70% volume, 85% intensity) |
+| Prolonged Elevated | 5+ days at score 6+ | Volume |
+| Combined Factors | High fatigue + poor recovery | Full Rest |
+
+---
+
 ## Domain Interface
 
 ```typescript
