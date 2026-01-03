@@ -10,6 +10,12 @@ Complete reference for the Mo app's quality enforcement system: 27 automated qua
 
 ---
 
+**Related Documentation:**
+- [Development Workflow](./workflow.md) - Feature development methodology (Phase 1 & 2 testing)
+- See `.claude/WORKFLOW_GUIDE.md` in mo-app for operational details
+
+---
+
 ## System Overview
 
 ```
@@ -818,6 +824,66 @@ MINIMUM_FILES=14
 | Components (logic) | ✅ 100% | ❌ | ❌ |
 | Pages/Layouts | ❌ | ✅ 100% | ✅ 100% |
 | UI Components (pure) | ❌ | ✅ | ✅ |
+
+---
+
+## Phase 1 & 2 Testing Workflow
+
+The 27 quality gates enforce **how** code is validated. The Phase 1 & 2 workflow defines **when** tests are written.
+
+### Phase 1: Behavior Tests (Before Building)
+
+**Written:** Before implementing the feature
+**Purpose:** Define expected behavior (requirements)
+**Enforced by:** Gate 1.3 (test coverage gate)
+
+**Example:**
+```typescript
+// tests/api/workout.behavior.test.ts
+it('should allow user to start a workout', async () => {
+  // Test will FAIL initially - that's expected
+  const response = await POST('/api/ppl/session', {...});
+  expect(response.status).toBe(201);
+});
+```
+
+**Gate Enforcement:**
+- Gate 1.3 blocks commit if you add source files without test files
+- Forces you to write tests BEFORE or WITH code
+
+### Phase 2: Implementation Tests (After Building)
+
+**Written:** After implementation passes Phase 1 tests
+**Purpose:** Verify implementation details and edge cases
+**Enforced by:** Gate 1.6 & 2.13 (100% coverage)
+
+**Example:**
+```typescript
+// tests/lib/fatigue.test.ts
+describe('calculateFatigue', () => {
+  it('should calculate fatigue score from factors', () => {
+    // Test implementation details
+    const score = calculateFatigue({...});
+    expect(score).toBeGreaterThan(0);
+  });
+});
+```
+
+**Gate Enforcement:**
+- Gate 1.6: Enforces 100% coverage on all tested files
+- Gate 2.14: Detects if files dropped out of coverage
+
+### How They Work Together
+
+```
+1. Write Phase 1 tests → 🔴 Tests fail (expected)
+2. Implement feature → ✅ Phase 1 tests pass
+3. Write Phase 2 tests → ✅ 100% coverage achieved
+4. Commit → Gate 1.3 passes (tests exist)
+5. Commit → Gate 1.6 passes (100% coverage)
+```
+
+**See also:** [Development Workflow](./workflow.md) for detailed Phase 1 & 2 methodology
 
 ---
 

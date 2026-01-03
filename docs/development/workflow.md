@@ -10,6 +10,12 @@ Standard workflow for building features in the Mo app with two-phase testing app
 
 ---
 
+**Related Documentation:**
+- [Quality Gates & Deployment](./quality-gates.md) - 27 automated quality gates
+- See `.claude/WORKFLOW_GUIDE.md` in mo-app for git commands and troubleshooting
+
+---
+
 ## Workflow Overview
 
 ```
@@ -287,10 +293,15 @@ describe('Progression API Integration', () => {
 ```
 
 **Coverage Goals:**
-- ✅ 80%+ line coverage
+- ✅ 100% line coverage (enforced by pre-push gates)
 - ✅ All edge cases covered
 - ✅ Error paths tested
 - ✅ Happy paths verified
+
+**Why 100%?**
+- Fitness data is sensitive - bugs can cause injury
+- Solo developer - need automated safety net
+- Prevents regressions during rapid development
 
 **Tools:**
 - `/test` command to run tests
@@ -325,16 +336,45 @@ describe('Progression API Integration', () => {
 **Goal:** Confirm everything builds and works.
 
 **Tasks:**
-- [ ] Run full build pipeline: `/build`
-- [ ] Fix any lint/type/test errors
-- [ ] Manual testing in browser
-- [ ] Test on mobile (if UI changes)
-- [ ] Check console for errors
 
-**Command:**
+**a) Run Build Pipeline**
 ```bash
 /build  # Runs: lint → typecheck → test → build
 ```
+
+**b) E2E Critical Flows (Required)**
+
+Pre-push hook runs these automatically (Gate 2.16):
+```bash
+npm run test:e2e:critical
+```
+
+**Critical flows tested:**
+- Auth: Sign in, sign out, session persistence
+- Onboarding: Complete flow, data persistence
+- Workout: Start session, log sets, complete
+- Progress: View history, see trends
+
+**Why required:** UI bugs can cause injury - E2E tests prevent regressions
+
+**c) Accessibility Testing (Required)**
+
+Pre-push hook runs these automatically (Gate 2.17):
+```bash
+npm run test:axe
+```
+
+**Pages tested:**
+- All pages checked for WCAG 2.1 Level A & AA compliance
+- Color contrast, keyboard navigation, screen reader compatibility
+
+**Why required:** App must be usable by everyone, including users with disabilities
+
+**d) Manual Browser Testing**
+- [ ] Test in browser (localhost:3000)
+- [ ] Test on mobile (if UI changes)
+- [ ] Check console for errors
+- [ ] Verify data persists correctly
 
 ---
 
