@@ -185,6 +185,29 @@ const sidebars: SidebarsConfig = {
         'api/progression',
       ],
     },
+    {
+      type: 'category',
+      label: 'Development',
+      items: [
+        'development/workflow',
+        'development/quality-gates',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Claude Code',
+      link: { type: 'doc', id: 'claude-code/index' },
+      items: [
+        'claude-code/setup',
+        'claude-code/onboarding',
+        'claude-code/models',
+        'claude-code/agents',
+        'claude-code/skills-commands',
+        'claude-code/rules-hooks',
+        'claude-code/security',
+        'claude-code/mcp-setup',
+      ],
+    },
   ],
 };
 
