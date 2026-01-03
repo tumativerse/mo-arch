@@ -538,7 +538,7 @@ npm run test:axe
 
 **Quality gate:**
 - Coverage: 80%+
-- Duplications: <3%
+- Duplications: `<3%`
 - Maintainability rating: A
 - Reliability rating: A
 - Security rating: A

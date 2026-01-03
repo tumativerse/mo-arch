@@ -1,0 +1,8 @@
+{
+  "label": "Claude Code",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "AI-assisted development configuration for Mo App"
+  }
+}
