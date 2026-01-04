@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-title: MO:JOURNEY & MO:MIND Summary
+sidebar_position: 6
+title: Quick Reference
 ---
 
 # MO:JOURNEY & MO:MIND Summary
@@ -665,8 +665,8 @@ ML/LLM ready for future upgrades
 
 1. **Review Documentation**
    - Read [Architectural Decisions](./decisions.md)
-   - Read [MO:JOURNEY Specification](./mo-journey.md)
-   - Read [MO:MIND Specification](./mo-mind.md)
+   - Read [MO:JOURNEY Specification](./mo-journey-spec.md)
+   - Read [MO:MIND Specification](./mo-mind-spec.md)
    - Read [Updated Architecture Overview](./overview.md)
 
 2. **Plan Implementation**
@@ -721,8 +721,8 @@ A: Agents run in parallel. Total latency ≈ slowest agent. Cache recommendation
 ## References
 
 - [Architectural Decisions](./decisions.md) - Why we made these choices
-- [MO:JOURNEY Specification](./mo-journey.md) - Detailed domain spec
-- [MO:MIND Specification](./mo-mind.md) - Detailed agent architecture
+- [MO:JOURNEY Specification](./mo-journey-spec.md) - Detailed domain spec
+- [MO:MIND Specification](./mo-mind-spec.md) - Detailed agent architecture
 - [Architecture Overview](./overview.md) - Updated 6-domain architecture
 - [Development Workflow](../development/workflow.md) - How to build features
 

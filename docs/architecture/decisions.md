@@ -414,7 +414,7 @@ We could build a comprehensive Goals system with all features, or start minimal 
 
 ## References
 
-- [MO:JOURNEY Domain Specification](./mo-journey.md)
-- [MO:MIND Domain Specification](./mo-mind.md)
+- [MO:JOURNEY Domain Specification](./mo-journey-spec.md)
+- [MO:MIND Domain Specification](./mo-mind-spec.md)
 - [Architecture Overview](./overview.md)
 - [Development Workflow](../development/workflow.md)

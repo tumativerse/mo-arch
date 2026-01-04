@@ -1,9 +1,9 @@
 ---
-sidebar_position: 6
-title: MO:JOURNEY
+sidebar_position: 4
+title: MO:JOURNEY Specification
 ---
 
-# MO:JOURNEY
+# MO:JOURNEY - Detailed Specification
 
 **Domain:** Strategic Orchestration
 **Personality:** "The Navigator"
@@ -865,6 +865,6 @@ MO:JOURNEY is the strategic orchestration domain that:
 ## References
 
 - [Architectural Decisions](./decisions.md)
-- [MO:MIND Domain Specification](./mo-mind.md)
+- [MO:MIND Domain Specification](./mo-mind-spec.md)
 - [Architecture Overview](./overview.md)
 - [Development Workflow](../development/workflow.md)

@@ -1,9 +1,9 @@
 ---
-sidebar_position: 7
-title: MO:MIND
+sidebar_position: 5
+title: MO:MIND Specification
 ---
 
-# MO:MIND
+# MO:MIND - Detailed Specification
 
 **Domain:** Intelligence Layer
 **Personality:** "The Advisor"
@@ -1179,6 +1179,6 @@ MO:MIND is the centralized intelligence domain that:
 ## References
 
 - [Architectural Decisions](./decisions.md)
-- [MO:JOURNEY Domain Specification](./mo-journey.md)
+- [MO:JOURNEY Domain Specification](./mo-journey-spec.md)
 - [Architecture Overview](./overview.md)
 - [Development Workflow](../development/workflow.md)
