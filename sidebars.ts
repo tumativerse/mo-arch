@@ -6,6 +6,16 @@ const sidebars: SidebarsConfig = {
     'architecture/overview',
     {
       type: 'category',
+      label: 'Architecture',
+      items: [
+        'architecture/decisions',
+        'architecture/mo-journey',
+        'architecture/mo-mind',
+        'architecture/mo-journey-mind-summary',
+      ],
+    },
+    {
+      type: 'category',
       label: 'MO:SELF',
       link: { type: 'doc', id: 'mo-self/index' },
       items: [
