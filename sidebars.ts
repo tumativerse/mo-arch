@@ -9,8 +9,6 @@ const sidebars: SidebarsConfig = {
       label: 'Architecture',
       items: [
         'architecture/decisions',
-        'architecture/mo-journey-spec',
-        'architecture/mo-mind-spec',
         'architecture/mo-journey-mind-summary',
       ],
     },
@@ -143,13 +141,17 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'MO:JOURNEY',
       link: { type: 'doc', id: 'mo-journey/index' },
-      items: [],
+      items: [
+        'mo-journey/specification',
+      ],
     },
     {
       type: 'category',
       label: 'MO:MIND',
       link: { type: 'doc', id: 'mo-mind/index' },
-      items: [],
+      items: [
+        'mo-mind/specification',
+      ],
     },
     {
       type: 'category',

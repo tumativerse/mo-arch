@@ -1,6 +1,6 @@
 ---
-sidebar_position: 5
-title: MO:MIND Specification
+sidebar_position: 2
+title: Specification
 ---
 
 # MO:MIND - Detailed Specification
@@ -1178,7 +1178,7 @@ MO:MIND is the centralized intelligence domain that:
 
 ## References
 
-- [Architectural Decisions](./decisions.md)
-- [MO:JOURNEY Domain Specification](./mo-journey-spec.md)
-- [Architecture Overview](./overview.md)
+- [Architectural Decisions](../architecture/decisions.md)
+- [MO:JOURNEY Domain Specification](../mo-journey/specification.md)
+- [Architecture Overview](../architecture/overview.md)
 - [Development Workflow](../development/workflow.md)

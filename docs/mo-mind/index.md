@@ -234,5 +234,5 @@ import {
 ## Related Documentation
 
 - [Architectural Decisions](../architecture/decisions.md) - Why MO:MIND was created
-- [MO:MIND Specification](../architecture/mo-mind-spec.md) - Detailed agent architecture
+- [MO:MIND Specification](./specification.md) - Detailed agent architecture
 - [MO:JOURNEY Integration](../mo-journey/) - How Journey Agent works with goals

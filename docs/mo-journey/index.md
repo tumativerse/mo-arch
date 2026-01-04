@@ -166,5 +166,5 @@ import {
 ## Related Documentation
 
 - [Architectural Decisions](../architecture/decisions.md) - Why MO:JOURNEY was created
-- [MO:JOURNEY Specification](../architecture/mo-journey-spec.md) - Detailed specification
+- [MO:JOURNEY Specification](./specification.md) - Detailed specification
 - [MO:MIND Integration](../mo-mind/) - How intelligence layer works
