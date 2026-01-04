@@ -14,39 +14,10 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'MO:SELF',
-      link: { type: 'doc', id: 'mo-self/index' },
+      label: 'MO:JOURNEY',
+      link: { type: 'doc', id: 'mo-journey/index' },
       items: [
-        {
-          type: 'category',
-          label: 'MoIdentity',
-          link: { type: 'doc', id: 'mo-self/mo-identity/index' },
-          items: [
-            'mo-self/mo-identity/mo-auth',
-            'mo-self/mo-identity/mo-profile',
-            'mo-self/mo-identity/mo-goals',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'MoPrefs',
-          link: { type: 'doc', id: 'mo-self/mo-prefs/index' },
-          items: [
-            'mo-self/mo-prefs/mo-settings',
-            'mo-self/mo-prefs/mo-gear',
-            'mo-self/mo-prefs/mo-alerts',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'MoHistory',
-          link: { type: 'doc', id: 'mo-self/mo-history/index' },
-          items: [
-            'mo-self/mo-history/mo-records',
-            'mo-self/mo-history/mo-streaks',
-            'mo-self/mo-history/mo-badges',
-          ],
-        },
+        'mo-journey/specification',
       ],
     },
     {
@@ -139,10 +110,39 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'MO:JOURNEY',
-      link: { type: 'doc', id: 'mo-journey/index' },
+      label: 'MO:SELF',
+      link: { type: 'doc', id: 'mo-self/index' },
       items: [
-        'mo-journey/specification',
+        {
+          type: 'category',
+          label: 'MoIdentity',
+          link: { type: 'doc', id: 'mo-self/mo-identity/index' },
+          items: [
+            'mo-self/mo-identity/mo-auth',
+            'mo-self/mo-identity/mo-profile',
+            'mo-self/mo-identity/mo-goals',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'MoPrefs',
+          link: { type: 'doc', id: 'mo-self/mo-prefs/index' },
+          items: [
+            'mo-self/mo-prefs/mo-settings',
+            'mo-self/mo-prefs/mo-gear',
+            'mo-self/mo-prefs/mo-alerts',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'MoHistory',
+          link: { type: 'doc', id: 'mo-self/mo-history/index' },
+          items: [
+            'mo-self/mo-history/mo-records',
+            'mo-self/mo-history/mo-streaks',
+            'mo-self/mo-history/mo-badges',
+          ],
+        },
       ],
     },
     {
